@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<core:View xmlns:core="sap.ui.core" 
+		   xmlns="sap.m" 
+		   xmlns:commons="sap.ui.commons"
+		   controllerName="User.view.S2"><!--Copied from source-->
+
+	<Page id="second" showNavButton="true" navButtonPress="_navButtonPress">
+		<headerContent></headerContent>
+		<content>
+			<!-- Replace with required full screen control -->
+			<List id="list" items="{/Users}" mode="{device&gt;/listMode}" select="_handleSelect">
+				<ObjectListItem id="MAIN_LIST_ITEM" number="{Amount}" numberUnit="{CurrencyCode}" press="_handleItemSelect" title="{Firstname} {Lastname}" type="{device&gt;/listItemType}">
+					<attributes>
+						<ObjectAttribute id="ATTR1" text="Email: {Email}"/>
+						<ObjectAttribute id="ATTR2" text="Phone Number: {ContactNo}"/>
+					</attributes>
+				</ObjectListItem>
+			</List>
+		</content>
+	</Page>
+</core:View>

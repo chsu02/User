@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<core:View xmlns:core="sap.ui.core" 
+		   xmlns="sap.m" 
+		   xmlns:commons="sap.ui.commons"
+		   controllerName="User.view.S1"><!--Copied from source-->
+
+	<Page id="main" title="User List" showNavButton="true" navButtonText="Go" navButtonType="Default">
+		<content>
+			<!-- Replace with required full screen control -->
+			<commons:Splitter 
+				id="splitterV"
+				splitterOrientation="Vertical" 
+				splitterPosition="20%"
+				minSizeFirstPane="20%"
+				minSizeSecondPane="30%"
+				width="100%"
+				height="100%">
+				<commons:firstPaneContent>
+					<List id="list" items="{/Users}" mode="{device&gt;/listMode}" select="_handleSelect">
+						<ObjectListItem id="MAIN_LIST_ITEM" number="{Amount}" numberUnit="{CurrencyCode}" press="_handleItemSelect" title="{Firstname} {Lastname}" type="{device&gt;/listItemType}">
+							<attributes>
+								<ObjectAttribute id="ATTR1" text="Email: {Email}"/>
+								<ObjectAttribute id="ATTR2" text="Phone Number: {ContactNo}"/>
+							</attributes>
+						</ObjectListItem>
+					</List>
+				</commons:firstPaneContent>
+				<commons:secondPaneContent>
+					<HBox id="map-canvas" height="100%" width="100%" fitContainer="true" justifyContent="Center" alignItems="Center"></HBox>
+				</commons:secondPaneContent>
+			</commons:Splitter>
+		</content>
+	</Page>
+</core:View>
