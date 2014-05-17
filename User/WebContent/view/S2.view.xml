@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <core:View xmlns:core="sap.ui.core" 
 		   xmlns="sap.m" 
-		   xmlns:commons="sap.ui.commons"
+		   xmlns:layout="sap.ui.layout"
+		   xmlns:form="sap.ui.layout.form"
 		   controllerName="User.view.S2"><!--Copied from source-->
 
 	<Page id="second" showNavButton="true" navButtonPress="_navButtonPress">
 		<headerContent></headerContent>
 		<content>
-			<!-- Replace with required full screen control -->
-			<List id="list" items="{/Users}" mode="{device&gt;/listMode}" select="_handleSelect">
-				<ObjectListItem id="MAIN_LIST_ITEM" number="{Amount}" numberUnit="{CurrencyCode}" press="_handleItemSelect" title="{Firstname} {Lastname}" type="{device&gt;/listItemType}">
-					<attributes>
-						<ObjectAttribute id="ATTR1" text="Email: {Email}"/>
-						<ObjectAttribute id="ATTR2" text="Phone Number: {ContactNo}"/>
-					</attributes>
-				</ObjectListItem>
-			</List>
+		<layout:Grid defaultSpan="L12 M12 S12" width="auto">
+			<layout:content>
+				<form:Form>
+					<form:title><core:Title text="Personal Information" /></form:title>
+					<form:layout>
+          				<form:ResponsiveGridLayout labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" />
+          			</form:layout>
+        			<form:formContainers>
+        				<form:FormContainer>
+							<form:FormElement label="First Name">
+								<form:fields>
+									<Input value="{Firstname}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement label="Last Name">
+								<form:fields>
+									<Input value="{Lastname}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement label="Email">
+								<form:fields>
+									<Input value="{Email}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement label="Phone Number">
+								<form:fields>
+									<Input value="{ContactNo}" />
+								</form:fields>
+							</form:FormElement>
+						</form:FormContainer>
+					</form:formContainers>
+				</form:Form>
+			</layout:content>
+		</layout:Grid>
 		</content>
 	</Page>
 </core:View>

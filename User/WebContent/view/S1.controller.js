@@ -18,14 +18,14 @@ sap.ca.scfld.md.controller.BaseFullscreenController.extend("User.view.S1", {
                 },
             },
             oEditBtn : {
-                sI18nBtnTxt : "S3_EDIT",  //Email
+                sI18nBtnTxt : "BTN_EMAIL",  //Email
                 onBtnPressed : function(evt) {
                     jQuery.sap.log.info("s3: edit pressed");
                 },
                 bEnabled : false, // default true
             },
             buttonList : [{
-                sI18nBtnTxt : "ADDITIONAL_BTN1", //Print
+                sI18nBtnTxt : "BTN_PRINT", //Print
                 onBtnPressed : function(evt) {
 //                    that.setBtnEnabled("mySpecialBtn", false);
                     jQuery.sap.log.info("additional button 1 pressed + additional button 2 disabled");
@@ -33,7 +33,7 @@ sap.ca.scfld.md.controller.BaseFullscreenController.extend("User.view.S1", {
             }, {
                 // do NOT use ID, it breaks everything with duplicate IDs
                 // sId : "mySpecialBtn", // optional
-                sI18nBtnTxt : "ADDITIONAL_BTN2",  //Fax
+                sI18nBtnTxt : "BTN_FAX",  //Fax
                 onBtnPressed : function(evt) {
                     jQuery.sap.log.info("additional button 1 pressed");
                 }

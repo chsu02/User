@@ -19,7 +19,7 @@ sap.ca.scfld.md.controller.BaseFullscreenController.extend("User.view.S2", {
 //                },
 //            },
             oEditBtn : {
-                sI18nBtnTxt : "S3_EDIT",
+                sI18nBtnTxt : "BTN_EDIT",
                 onBtnPressed : function(evt) {
                     jQuery.sap.log.info("s3: edit pressed");
                 },
