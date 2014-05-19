@@ -17,24 +17,39 @@
           			</form:layout>
         			<form:formContainers>
         				<form:FormContainer>
+							<form:FormElement label="Id" class="sapUiMediumMarginTop">
+								<form:fields>
+									<Input id="id" editable="false" value="{Id}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement label="User Id">
+								<form:fields>
+									<Input id="userId" editable="false" value="{UserId}" />
+								</form:fields>
+							</form:FormElement>
 							<form:FormElement label="First Name">
 								<form:fields>
-									<Input value="{Firstname}" />
+									<Input id="firstname" editable="false" value="{Firstname}" />
 								</form:fields>
 							</form:FormElement>
 							<form:FormElement label="Last Name">
 								<form:fields>
-									<Input value="{Lastname}" />
+									<Input id="lastname" editable="false" value="{Lastname}" />
 								</form:fields>
 							</form:FormElement>
 							<form:FormElement label="Email">
 								<form:fields>
-									<Input value="{Email}" />
+									<Input id="email" editable="false" value="{Email}" />
 								</form:fields>
 							</form:FormElement>
 							<form:FormElement label="Phone Number">
 								<form:fields>
-									<Input value="{ContactNo}" />
+									<Input id="contactNo" editable="false" value="{ContactNo}" />
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement label="Photo">
+								<form:fields>
+									<Image id="photo" editable="false" value="{Photo}" />
 								</form:fields>
 							</form:FormElement>
 						</form:FormContainer>
